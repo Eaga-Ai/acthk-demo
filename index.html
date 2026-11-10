@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-HK">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>香港咖啡紅茶協會 ACTHK｜概念示範樣品（非官方網站）</title>
+<meta name="description" content="香港咖啡紅茶協會網站概念示範樣品：金茶王歷屆得獎者檔案庫、會員企業展示、線上入會申請、傳媒報道歸檔。本頁為概念示範，非協會官方網站。">
+<style>
+:root{
+  --coffee:#3b2417; --coffee2:#54341f; --amber:#c8871e; --amber2:#e3a93c;
+  --milktea:#b06f2a; --teared:#8e2f23; --cream:#faf5ec; --paper:#fffdf8;
+  --ink:#2a1c11; --mut:#7a6a58; --line:#e7dcc8; --gold:#f3e3bd;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:"PingFang TC","PingFang HK","Microsoft JhengHei","Noto Sans TC",sans-serif;background:var(--cream);color:var(--ink);line-height:1.75;overflow-x:hidden}
+h1,h2,h3,.serif{font-family:"Songti TC","Songti HK","Noto Serif TC","PMingLiU",serif}
+a{color:var(--milktea);text-decoration:none}
+img{max-width:100%}
+.wrap{max-width:1080px;margin:0 auto;padding:0 18px}
+.demo-bar{background:#161311;color:#fff;text-align:center;font-size:.86rem;letter-spacing:.06em;padding:8px 12px}
+header.site{background:var(--coffee);color:#f7ead2;position:sticky;top:0;z-index:50;box-shadow:0 2px 14px rgba(30,16,6,.35)}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:12px 0;gap:10px}
+.brand{display:flex;align-items:center;gap:12px;color:#f7ead2}
+.cup{width:42px;height:42px;flex:0 0 42px;border:2px solid var(--amber2);border-radius:6px 6px 16px 16px;position:relative;background:linear-gradient(180deg,#f3d9a4 0 38%,#c8871e 38% 100%)}
+.cup:after{content:"";position:absolute;right:-11px;top:9px;width:12px;height:16px;border:2px solid var(--amber2);border-left:none;border-radius:0 10px 10px 0}
+.brand b{font-size:1.06rem;letter-spacing:.04em;display:block;line-height:1.3}
+.brand span{font-size:.72rem;letter-spacing:.14em;color:#d9bd8a;text-transform:uppercase}
+nav.links{display:flex;gap:2px;flex-wrap:wrap}
+nav.links a{color:#f0dfc0;font-size:.9rem;padding:7px 10px;border-radius:6px}
+nav.links a:hover{background:rgba(255,255,255,.1);color:#fff}
+.burger{display:none;background:none;border:1px solid #8a6a44;color:#f7ead2;border-radius:6px;padding:6px 12px;font-size:1rem}
+.hero{background:radial-gradient(900px 420px at 85% -60px,rgba(227,169,60,.35),transparent 60%),linear-gradient(160deg,#2c1a0e,#3b2417 55%,#54341f);color:#f9efdb;padding:56px 0 44px;position:relative}
+.hero .tag{display:inline-block;border:1px solid var(--amber2);color:var(--gold);border-radius:999px;padding:3px 14px;font-size:.82rem;letter-spacing:.2em;margin-bottom:16px}
+.hero h1{font-size:2.35rem;line-height:1.3;letter-spacing:.03em}
+.hero h1 em{font-style:normal;color:var(--amber2)}
+.hero .en{letter-spacing:.22em;font-size:.8rem;color:#cdb287;text-transform:uppercase;margin-top:6px}
+.hero p.lead{margin-top:16px;max-width:640px;color:#eadfc6;font-size:1.02rem}
+.final-card{margin-top:24px;background:rgba(255,250,238,.07);border:1px solid rgba(227,169,60,.55);border-left:5px solid var(--amber);border-radius:10px;padding:16px 18px;max-width:640px}
+.final-card b{color:var(--amber2);letter-spacing:.05em}
+.final-card .big{font-size:1.14rem;color:#fff;margin:4px 0}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:28px}
+.stat{background:rgba(255,250,238,.06);border:1px solid rgba(227,169,60,.3);border-radius:10px;padding:14px 10px;text-align:center}
+.stat b{display:block;font-size:1.45rem;color:#fff;font-family:"Songti TC","Noto Serif TC",serif}
+.stat span{font-size:.8rem;color:#d9c69c;letter-spacing:.05em}
+section{padding:52px 0 8px}
+.sec-head{margin-bottom:22px}
+.sec-head .k{color:var(--teared);letter-spacing:.3em;font-size:.78rem;font-weight:700}
+.sec-head h2{font-size:1.65rem;margin-top:4px;color:var(--coffee)}
+.sec-head p{color:var(--mut);max-width:720px;margin-top:6px}
+.entries{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.entry{display:block;background:var(--paper);border:1px solid var(--line);border-top:4px solid var(--amber);border-radius:12px;padding:20px 16px;color:var(--ink);box-shadow:0 3px 10px rgba(90,60,20,.06)}
+.entry:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(90,60,20,.13)}
+.entry .ic{font-size:1.5rem}
+.entry b{display:block;margin:8px 0 4px;font-size:1.05rem}
+.entry span{font-size:.88rem;color:var(--mut);display:block}
+.entry .go{color:var(--teared);font-weight:700;font-size:.86rem;margin-top:8px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:20px;box-shadow:0 3px 10px rgba(90,60,20,.05)}
+.card h3{color:var(--coffee);margin-bottom:8px;font-size:1.12rem}
+.card p,.card li{font-size:.95rem}
+.mut{color:var(--mut)} .small{font-size:.85rem}
+.pill{display:inline-block;background:#f6ead0;color:#8a5a12;border-radius:999px;padding:1px 10px;font-size:.78rem;margin:2px 3px 2px 0}
+.pill.red{background:#f7e3de;color:var(--teared)}
+/* archive */
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}
+.tabs button{border:1px solid var(--amber);background:#fff;color:var(--milktea);border-radius:999px;padding:7px 18px;font-size:.95rem;cursor:pointer;font-family:inherit}
+.tabs button.on{background:var(--amber);color:#fff;font-weight:700}
+.year-panel{display:none}
+.year-panel.on{display:block}
+table{width:100%;border-collapse:collapse;background:var(--paper);border-radius:10px;overflow:hidden;font-size:.94rem}
+th{background:var(--coffee);color:#f3e3bd;text-align:left;padding:10px 12px;font-weight:600}
+td{padding:10px 12px;border-top:1px solid var(--line);vertical-align:top}
+tr td:first-child{white-space:nowrap}
+.gold{color:var(--amber);font-weight:700}.silver{color:#6f6f6f;font-weight:700}.bronze{color:#a0612c;font-weight:700}
+.note{background:#fdf6e3;border:1px dashed var(--amber);border-radius:10px;padding:12px 16px;font-size:.9rem;margin-top:14px}
+details{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:14px 18px;margin-top:12px}
+details summary{cursor:pointer;font-weight:700;color:var(--coffee)}
+details .raw{white-space:pre-wrap;font-size:.9rem;margin-top:10px;color:#43331f}
+/* forms */
+form .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+label{font-size:.9rem;font-weight:600;display:block;margin-bottom:10px}
+input,select,textarea{width:100%;margin-top:5px;padding:10px 12px;border:1px solid #d8c8a6;border-radius:8px;font-family:inherit;font-size:.95rem;background:#fff}
+.btn{background:var(--teared);color:#fff;border:none;border-radius:8px;padding:12px 26px;font-size:1rem;cursor:pointer;font-family:inherit;letter-spacing:.05em}
+.btn:hover{background:#752619}
+.ok-msg{display:none;background:#eef6e6;border:1px solid #9dbb7d;color:#3c5a24;border-radius:10px;padding:14px 16px;margin-top:14px;font-size:.95rem}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:14px}
+.step{background:#fdf6e3;border-radius:10px;padding:14px;text-align:center;font-size:.9rem}
+.step b{display:block;color:var(--teared);font-size:1.2rem;font-family:"Songti TC",serif}
+/* media archive */
+.mrow{display:flex;gap:14px;padding:13px 4px;border-bottom:1px solid var(--line);align-items:baseline}
+.mrow .d{flex:0 0 92px;color:var(--teared);font-weight:700;font-size:.88rem}
+.mrow .t{flex:1}
+.mrow .t b{color:var(--ink)}
+.mrow .src{flex:0 0 auto}
+footer{background:var(--coffee);color:#e8d9ba;margin-top:60px;padding:36px 0 26px}
+footer a{color:var(--gold)}
+footer .cols{display:grid;grid-template-columns:1.2fr 1fr;gap:20px}
+footer .fine{border-top:1px solid rgba(255,255,255,.15);margin-top:22px;padding-top:14px;font-size:.82rem;color:#bda87f}
+.searchbox{display:flex;gap:8px;margin-bottom:14px}
+.searchbox input{flex:1}
+.toplink{position:fixed;right:16px;bottom:16px;background:var(--coffee);color:#f3e3bd;border-radius:999px;padding:9px 15px;font-size:.85rem;box-shadow:0 4px 14px rgba(0,0,0,.3);z-index:40}
+@media (max-width:760px){
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .entries,.grid3,.steps{grid-template-columns:1fr 1fr}
+  .grid2,footer .cols,form .row{grid-template-columns:1fr}
+  .hero h1{font-size:1.8rem}
+  header.site{top:0}
+  nav.links{display:none;position:absolute;top:100%;left:0;right:0;background:var(--coffee);flex-direction:column;padding:10px 18px 16px}
+  nav.links.open{display:flex}
+  .burger{display:block}
+  .nav{position:relative}
+  td,tr th{padding:8px}
+  table{font-size:.88rem}
+  .mrow{flex-wrap:wrap;gap:4px}
+}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Organization","name":"香港咖啡紅茶協會","alternateName":"Association of Coffee and Tea of Hong Kong","foundingDate":"2008","email":"info@coffee-tea.hk","telephone":"+852-3181-4498","address":{"@type":"PostalAddress","streetAddress":"新都會廣場2座7樓713-719室","addressLocality":"葵芳","addressRegion":"新界","addressCountry":"HK"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"香港咖啡紅茶協會是甚麼機構？何時成立？","acceptedAnswer":{"@type":"Answer","text":"香港咖啡紅茶協會（Association of Coffee and Tea of Hong Kong）由金百加集團主席黃家和太平紳士於2008年創立，是一個非政治及非牟利組織，旨在連結咖啡和紅茶從業員、業界人士、商家及愛好者。"}},
+{"@type":"Question","name":"金茶王大賽是甚麼比賽？辦了多少屆？","acceptedAnswer":{"@type":"Answer","text":"金茶王大賽是香港咖啡紅茶協會主辦的港式奶茶比賽，自2009年起舉辦；2026年為第17屆，香港區決賽於2026年8月14日在香港會議展覽中心香港國際茶展舉行，全國賽及大灣區賽總決賽定於2026年12月10日在廣州舉行。"}},
+{"@type":"Question","name":"如何加入香港咖啡紅茶協會？會費多少？","acceptedAnswer":{"@type":"Answer","text":"凡正式註冊的公司可申請成為公司會員，費用為港幣500元（一次性，毋需年費）；對咖啡和紅茶有興趣的人士可申請成為普通會員，費用為港幣100元（一次性，毋需年費）。費用資料來源：協會官網「成為會員」頁。"}},
+{"@type":"Question","name":"歷屆金茶王得獎名單在哪裡查閱？","acceptedAnswer":{"@type":"Answer","text":"本示範站設有「金茶王歷屆檔案庫」，按年份整理各屆得獎名單；2026年（第17屆）香港區冠軍為鍾煜培、亞軍為陳錫恒、季軍為李偉志。"}},
+{"@type":"Question","name":"協會的聯絡方式和地址是甚麼？","acceptedAnswer":{"@type":"Answer","text":"電話 (852) 3181 4498，傳真 (852) 3181 4442，電郵 info@coffee-tea.hk，地址為香港新界葵芳新都會廣場2座7樓713-719室。"}}
+]}
+</script>
+</head>
+<body>
+<div class="demo-bar">概念示範樣品 · 非協會官方網站 · 示範內容以公開資料整理，正式資料以協會公佈為準</div>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="#top"><span class="cup"></span><span><b>香港咖啡紅茶協會</b><span>Association of Coffee and Tea of Hong Kong</span></span></a>
+    <button class="burger" onclick="document.getElementById('menu').classList.toggle('open')">☰ 選單</button>
+    <nav class="links" id="menu">
+      <a href="#about">關於協會</a><a href="#archive">金茶王檔案庫</a><a href="#members">會員企業</a><a href="#join">入會申請</a><a href="#events">活動</a><a href="#media">傳媒報道</a><a href="#partners">贊助與合作</a><a href="#contact">聯絡我們</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero" id="top">
+  <div class="wrap">
+    <span class="tag">創立於 2008 年 · 非牟利行業組織</span>
+    <h1>香港<em>咖啡紅茶</em>協會</h1>
+    <div class="en">Association of Coffee and Tea of Hong Kong · ACTHK</div>
+    <p class="lead">由金百加集團主席黃家和太平紳士於 2008 年創立，連結咖啡和紅茶從業員、業界人士、商家及愛好者，提供交流平台、行業資訊與培訓活動，提升會員及行業的水平與競爭力。</p>
+    <div class="final-card">
+      <b>當屆大賽 · 最新資訊</b>
+      <div class="big">第 17 屆《全國及大灣區金茶王大賽（港式奶茶）》</div>
+      <div>香港區決賽已於 2026 年 8 月 14 日在香港國際茶展圓滿舉行；<strong style="color:#fff">全國賽及大灣區賽總決賽：2026 年 12 月 10 日 · 廣州</strong>，香港區冠軍將代表香港出賽。</div>
+    </div>
+    <div class="stats">
+      <div class="stat"><b>2008</b><span>協會創立年份</span></div>
+      <div class="stat"><b>第 17 屆</b><span>金茶王大賽（2026）</span></div>
+      <div class="stat"><b>2017</b><span>港式奶茶列入非遺代表作名錄</span></div>
+      <div class="stat"><b>23,420</b><span>金茶王 FB 專頁追蹤者（2026-11-10 查核）</span></div>
+    </div>
+  </div>
+</div>
+
+<section id="entries">
+  <div class="wrap">
+    <div class="entries">
+      <a class="entry" href="#archive"><span class="ic">🏆</span><b>歷屆得獎者檔案庫</b><span>按年份查閱每一屆金茶王得獎名單，連得獎者所屬店舖一併呈現。</span><span class="go">進入檔案庫 →</span></a>
+      <a class="entry" href="#news"><span class="ic">📰</span><b>最新消息</b><span>協會最新動態，按日期先後清楚排列，每條都標明完整年份。</span><span class="go">看最新消息 →</span></a>
+      <a class="entry" href="#members"><span class="ic">🏪</span><b>會員企業</b><span>會員企業專屬展示專區：簡介、地區、聯絡與主打產品一頁找到。</span><span class="go">瀏覽會員企業 →</span></a>
+      <a class="entry" href="#join"><span class="ic">✍️</span><b>入會申請</b><span>網上填表即可申請：公司會員與普通會員資格、費用、流程一目了然。</span><span class="go">立即申請 →</span></a>
+    </div>
+  </div>
+</section>
+
+<section id="news">
+  <div class="wrap">
+    <div class="sec-head"><div class="k">NEWS</div><h2>最新消息</h2><p>按日期倒序排列，完整標示年月日——不再出現舊站消息無年份、次序混亂的問題。</p></div>
+    <div class="grid3">
+      <div class="card"><span class="pill red">2026 年 9 月</span><h3>雲南精品咖啡探索之旅</h3><p class="mut">協會組團前往雲南，探索精品咖啡產區與產業合作機會。</p></div>
+      <div class="card"><span class="pill red">2026-09-03</span><h3>保山考察及簽約</h3><p class="mut">協會赴雲南保山考察咖啡產業，並簽署合作安排，推動滇港咖啡交流。</p></div>
+      <div class="card"><span class="pill red">2026-08-14</span><h3>第 17 屆金茶王大賽香港區決賽結果</h3><p class="mut">冠軍鍾煜培、亞軍陳錫恒、季軍李偉志，完整名單見本頁檔案庫。</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap">
+    <div class="sec-head"><div class="k">ABOUT</div><h2>關於協會</h2></div>
+    <div class="grid2">
+      <div class="card">
+        <h3>協會簡介</h3>
+        <p>「香港咖啡紅茶協會」是一個非政治及非牟利組織機構，由金百加集團主席黃家和太平紳士於 2008 年創立。成立目的為連結咖啡和紅茶從業員、業界人士、商家及愛好者，提供一個廣闊的交流平台，提供行業的最新資訊及動態、培訓等各類活動，以助提升會員及行業的水平，幫助增加及維護其在市場的競爭力。</p>
+        <p style="margin-top:10px">主席：黃家和教授（BBS，JP），金百加集團主席<br>副主席：黃浩鈞，金百加集團總經理（公開報道）</p>
+      </div>
+      <div class="card">
+        <h3>協會宗旨</h3>
+        <p><span class="pill">促進咖啡及紅茶業發展</span><span class="pill">提升產品知識及技術研究</span><span class="pill">鼓勵成員溝通交流合作</span><span class="pill">交流最新趨勢及相關法例</span><span class="pill">增加及維護市場競爭力</span></p>
+        <h3 style="margin-top:16px">年度工作節奏</h3>
+        <p class="mut">年初：港式奶茶工作坊密集期 · 6 月：非遺月推廣及大賽報名 · 7 月：啟動禮及初賽 · 8 月：香港區決賽（香港國際茶展） · 12 月：全國賽及大灣區賽總決賽（廣州）</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="archive">
+  <div class="wrap">
+    <div class="sec-head"><div class="k">KAMCHA ARCHIVE</div><h2>金茶王歷屆得獎者檔案庫</h2>
+    <p>舊站的得獎名單多屆堆疊在一頁、沒有年份、最新一屆名單不在頁上。這裡按年份分屆整理：點選年份即可查閱該屆名單，得獎者連同所屬店舖一併呈現。</p></div>
+
+    <div class="tabs" id="yearTabs">
+      <button class="on" data-y="y2026">2026 · 第 17 屆</button>
+      <button data-y="y2025">2025 · 第 16 屆</button>
+      <button data-y="y2024">2024 · 第 15 屆</button>
+      <button data-y="y2023">2023</button>
+      <button data-y="y2019">2019 · 第 11 屆</button>
+      <button data-y="y-gap">2020–2022</button>
+      <button data-y="y-early">早期名單（年份待核對）</button>
+    </div>
+
+    <div class="year-panel on" id="y2026">
+      <div class="card" style="margin-bottom:14px">
+        <h3>第 17 屆《全國及大灣區金茶王大賽（港式奶茶）2026》</h3>
+        <p>主題：<strong>非遺具創意 · 奶茶顯新風</strong>　·　香港區決賽：2026 年 8 月 14 日，香港會議展覽中心（香港國際茶展）<br>全國賽及大灣區賽總決賽：2026 年 12 月 10 日，廣州</p>
+      </div>
+      <table>
+        <tr><th style="width:16%">賽區</th><th style="width:14%">獎項</th><th style="width:16%">姓名</th><th>所屬店舖／背景（已核實公開資料）</th></tr>
+        <tr><td>香港區決賽</td><td class="gold">冠軍</td><td><strong>鍾煜培</strong></td><td>經營三間咖啡店；十年港式奶茶製作經驗、十五年咖啡專業背景（店名待確認）</td></tr>
+        <tr><td>香港區決賽</td><td class="silver">亞軍</td><td><strong>陳錫恒</strong></td><td>元朗巨昇冰室（負責人）</td></tr>
+        <tr><td>香港區決賽</td><td class="bronze">季軍</td><td><strong>李偉志</strong></td><td>父親經營 50 年歷史茶餐廳，為茶餐廳傳人（店名待確認）</td></tr>
+        <tr><td>香港區決賽</td><td>優異獎</td><td>羅啟賢</td><td>（排名不分先後）</td></tr>
+        <tr><td>香港區決賽</td><td>優異獎</td><td>譚凱恩</td><td>（排名不分先後）</td></tr>
+        <tr><td>香港區決賽</td><td>優異獎</td><td>蔡炯懷</td><td>（排名不分先後）</td></tr>
+        <tr><td>香港區決賽</td><td>優異獎</td><td>陳寶華</td><td>（排名不分先後）</td></tr>
+        <tr><td>香港區決賽</td><td>優異獎</td><td>黃乙軒</td><td>（排名不分先後）</td></tr>
+      </table>
+      <div class="note">資料來源：金茶王品牌官方帳號 2026-08-15 公佈之完整名單、香港01 及中新社報道。人名用字以協會官方渠道公佈寫法為準；店名未有公開出處者標「待確認」，正式上線前由協會確認。</div>
+    </div>
+
+    <div class="year-panel" id="y2025">
+      <div class="card" style="margin-bottom:14px">
+        <h3>第 16 屆金茶王大賽（2025）</h3>
+        <p>主題：<strong>非遺文化傳帶路 · 奶茶飄香遍神州</strong>　·　香港區決賽：2025 年 8 月 15 日，香港國際茶展；文化體育及旅遊局局長羅淑佩任主禮嘉賓。廣州總決賽約 300 名師傅參與。</p>
+      </div>
+      <table>
+        <tr><th style="width:16%">賽區</th><th style="width:14%">獎項</th><th style="width:16%">姓名</th><th>所屬店舖／背景</th></tr>
+        <tr><td>香港區決賽</td><td class="gold">冠軍</td><td><strong>蔣紹強</strong></td><td>待協會提供</td></tr>
+        <tr><td>香港區決賽</td><td class="silver">亞軍</td><td><strong>周修侹</strong></td><td>待協會提供</td></tr>
+        <tr><td>香港區決賽</td><td class="bronze">季軍</td><td><strong>李樂謙</strong></td><td>待協會提供</td></tr>
+      </table>
+      <div class="note">資料來源：政府新聞公報及公開報道。本屆優異獎名單與得獎者店舖資料，待協會提供後補入。</div>
+    </div>
+
+    <div class="year-panel" id="y2024">
+      <div class="card" style="margin-bottom:14px">
+        <h3>第 15 屆金茶王大賽（2024）</h3>
+        <p>主題：<strong>非遺文化耀國際 · 奶茶飄香遍神州</strong>　·　香港區決賽：2024 年 8 月 16 日　·　廣州總決賽：2024 年 11 月 28 日，同場舉行粵港澳大灣區餐飲食品業論壇。</p>
+      </div>
+      <div class="note">本屆得獎名單的公開出處未完整整理，檔案庫先保留屆次與賽事資料欄位，得獎名單<strong>待協會提供</strong>後歸位——不以未核實資料填充。</div>
+    </div>
+
+    <div class="year-panel" id="y2023">
+      <div class="card">
+        <h3>2023 年</h3>
+        <p>協會主站大賽頁載有本年主題回顧；屆次、決賽日期與得獎名單的完整資料<strong>待協會提供</strong>後歸入本頁，不自行推斷屆次編號。</p>
+      </div>
+    </div>
+
+    <div class="year-panel" id="y2019">
+      <div class="card">
+        <h3>2019 年 · 第 11 屆</h3>
+        <p>協會主站大賽頁載有本屆主題回顧；得獎名單完整資料<strong>待協會提供</strong>後歸入本頁。</p>
+      </div>
+    </div>
+
+    <div class="year-panel" id="y-gap">
+      <div class="card">
+        <h3>2020–2022 年</h3>
+        <p>協會主站大賽頁未有載列這三年的屆次回顧。檔案庫在此保留三年份欄位，資料<strong>待協會提供</strong>——歷史是否完整，由完整的欄位與誠實的標示開始。</p>
+      </div>
+    </div>
+
+    <div class="year-panel" id="y-early">
+      <div class="card" style="margin-bottom:14px">
+        <h3>早期名單（年份待協會核對）</h3>
+        <p>以下名單原載於協會主站「過往比賽得獎者」頁，該頁各段名單<strong>均無年份標籤</strong>，先後次序亦不明。本檔案庫按原頁內容收錄並按段落分區，逐區標示「年份待協會核對」，<strong>不自行推斷年份配屬</strong>；待協會核對後即可逐段歸入正確年份。</p>
+      </div>
+      <table>
+        <tr><th colspan="3">國際金茶王總決賽得獎者（年份待核對）</th></tr>
+        <tr><td class="gold" style="width:14%">冠軍</td><td><strong>楊如正師傅</strong>（廣州）</td><td></td></tr>
+        <tr><td class="silver">亞軍</td><td><strong>Christopher Siu 師傅</strong>（加拿大）</td><td></td></tr>
+        <tr><td class="bronze">季軍</td><td><strong>梁東波師傅</strong>（香港）</td><td></td></tr>
+        <tr><td>優異獎</td><td colspan="2">朱淑蘭師傅（澳洲）、吳年春師傅（上海）、郭麗敏師傅（深圳）（排名不分先後）</td></tr>
+        <tr><td colspan="3" class="mut">同段香港賽區：冠軍 梁東波師傅、亞軍 黃乙軒師傅、季軍 陳錫恆師傅、優異獎 陳偉強師傅、鄧日彰師傅、王煒謙師傅。其餘賽區（上海、廣州、深圳、澳洲、北美）名單見下方原文分區。</td></tr>
+      </table>
+      <table style="margin-top:14px">
+        <tr><th colspan="3">大灣區金茶王總決賽得獎者（年份待核對）</th></tr>
+        <tr><td class="gold" style="width:14%">冠軍</td><td><strong>陳進良師傅</strong>（中山）</td><td></td></tr>
+        <tr><td class="silver">亞軍</td><td><strong>梁振忠師傅</strong>（澳門）</td><td></td></tr>
+        <tr><td class="bronze">季軍</td><td><strong>陳偉雄師傅</strong>（深圳）</td><td></td></tr>
+        <tr><td>優異獎</td><td colspan="2">吳美卿師傅（江門）、陳炯盛師傅（佛山）、程曉康師傅（東莞）（排名不分先後）</td></tr>
+        <tr><td colspan="3" class="mut">同段香港賽區：冠軍 梁海慶師傅、亞軍 梁銘倫師傅、季軍 湛樹佳師傅、優異獎 陳維珍師傅、柳晴甄師傅、梅漢榮師傅。其餘賽區名單見下方原文分區。</td></tr>
+      </table>
+      <details>
+        <summary>北美金鴛鴦得獎者及金茶王星章（年份待核對）— 按原頁收錄</summary>
+        <div class="raw">北美金鴛鴦得獎者：
+冠軍：Sarah Ji師傅
+亞軍：董力全師傅
+季軍：Christopher Siu師傅
+優異獎（排名不分先後）：郭瑪露師傅、黎球銳師傅
+
+金茶王星章得獎者（排名不分先後）：
+銀星章：錢寶信、周漢文、葉達生</div>
+      </details>
+      <details>
+        <summary>早期名單原文分區（一）：其餘國際總決賽段落 — 按原頁收錄，年份待核對</summary>
+        <div class="raw">國際金茶王總決賽得獎者：冠軍：葉達生師傅（香港） 亞軍：譚玉火師傅（深圳） 季軍：許良新師傅（武漢） 優異獎（排名不分先後）：邱雅倫師傅（加拿大）、餘少龍師傅（廣州）、趙瑞師傅（上海）、潘家威師傅（澳洲）。香港：冠軍 葉達生師傅、亞軍 孫言睿師傅、季軍 黃乙軒師傅、優異獎 龐朝羽師傅、謝兆璋師傅、湛樹佳師傅。金鴛鴦決賽得獎者：冠軍 鄧日彰師傅、亞軍 葉達生師傅、季軍 鄺健昌師傅、優異獎 梁浩榮師傅、黃天升師傅、葉志輝師傅。
+
+國際金茶王總決賽得獎者：冠軍：薛美寧師傅（上海） 亞軍：何俊成師傅（深圳） 季軍：黃俊傑師傅（墨爾本） 優異獎：陳偉強師傅（北京）、錢寶信師傅（香港）、梁立安師傅（加拿大）、彭德優師傅（廣州）。金鴛鴦決賽得獎者：冠軍 黃一峰師傅、亞軍 陳偉雄師傅、季軍 陳子平師傅、優異獎 黃天升師傅、鄧日彰師傅、葉志輝師傅。
+
+國際金茶王總決賽得獎者：冠軍：陳子平師傅（香港） 亞軍：畢潤超師傅（廣州） 季軍：陳永雄師傅（墨爾本） 優異獎：趙棟深師傅（加拿大）、梁遠輝師傅（上海）、何秋榮師傅（深圳）。金鴛鴦決賽得獎者：冠軍 黃一峰師傅、亞軍 何俊成師傅、季軍 黃天升師傅、優異獎 吳志維師傅、彭家豪師傅、謝兆璋師傅。
+
+國際金茶王總決賽得獎者：冠軍：錢寶信師傅（香港） 亞軍：張祥樂師傅（廣州） 季軍：穆偉師傅（上海） 優異獎：黃楚鳯師傅（加拿大）、黄海澄師傅（悉尼）、龔雪玲師傅（深圳）。金鴛鴦決賽得獎者：冠軍 楊智斌師傅、亞軍 嚴兆生師傅、季軍 張玲音師傅、優異獎 龍果師傅、錢寶信師傅、曾嘯傑師傅。</div>
+      </details>
+      <details>
+        <summary>早期名單原文分區（二）：其餘國際總決賽段落 — 按原頁收錄，年份待核對</summary>
+        <div class="raw">國際金茶王總決賽得獎者：冠軍：周漢文師傅（香港） 亞軍：李茂玉師傅（墨爾本） 季軍：齊賢召師傅（上海） 優異獎：江文聰師傅（廣州）、唐澤新師傅（深圳）、林健茵師傅（加拿大）、劉海師傅（西安）。青年金茶王決賽得獎者：專業組 冠軍 葉達生師傅、亞軍 何廣雄師傅、季軍 蘇建棉師傅；業餘組 冠軍 周穎洛師傅、亞軍 徐偉麟師傅、季軍 蘇汶婉師傅。金鴛鴦決賽得獎者：冠軍 高德光師傅、亞軍 陳偉雄師傅、季軍 楊智斌師傅、優異獎 梁德酬師傅、謝兆璋師傅、黃乙軒師傅。
+
+國際金茶王大賽總決賽得獎者：冠軍：莫佩玲師傅（香港） 亞軍：沈珠仁師傅（上海） 季軍：談耀昌師傅（澳洲） 優異獎（排名不分先後）：謝兆璋師傅、林少昂師傅、王國銘師傅。金鴛鴦決賽得獎者：冠軍 林少昂師傅、亞軍 高德光師傅、季軍 陳仲文師傅、優異獎 周漢文師傅、黃乙軒師傅、吳志維師傅。
+
+國際金茶王大賽總決賽得獎者：冠軍：林君翰師傅（多倫多） 亞軍：梁德酬師傅（香港） 季軍：王輪師傅（上海）。金鴛鴦決賽得獎者：冠軍 鄺健昌師傅、亞軍 黃德威師傅、季軍 何冠祖師傅、優異獎 梁永浩師傅、梁莉銘師傅、李駿文師傅。
+
+國際金茶王大賽總決賽得獎者：冠軍：陳錦滙師傅（香港） 亞軍：梁錦年師傅（深圳） 季軍：趙棟樑師傅（多倫多） 優異獎（排名不分先後）：鄭春光師傅、周子雄師傅、鍾劍輝師傅。
+
+國際金茶王大賽總決賽得獎者：總冠軍：羅德師傅（香港） 亞軍：張錦雲師傅（澳門） 季軍：王輪師傅（上海） 優異獎（排名不分先後）：梁德酬師傅、莫佩玲師傅、古耀文師傅。全港首屆港式咖啡大賽得獎者：冠軍 朱元秀師傅（深圳）。青年金茶王大賽得獎者：冠軍 吳漢源師傅、亞軍 黃翠儀師傅、季軍 黃德洛師傅、優異獎 江紀楓師傅、麥淑清師傅。
+
+金茶王（個人組）決賽得獎者：冠軍 陳偉聰師傅、亞軍 李兆成師傅、季軍 潘日勤師傅、優異獎 羅德師傅、隋麗華師傅、伍嘉健師傅。金茶王（公司組）決賽得獎者：冠軍 彭善明師傅、亞軍 蘇笑娟師傅、季軍 鄭汝雄師傅、優異獎 Ben Lam師傅、周漢文師傅、呂達康師傅。
+
+（以上各段在原頁均無年份標籤；各賽區完整名單以原頁為準，此處收錄總決賽段落，待協會核對年份後逐段歸位。）</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section id="members">
+  <div class="wrap">
+    <div class="sec-head"><div class="k">MEMBERS</div><h2>會員企業</h2>
+    <p>協會舊站沒有會員名錄，會員企業無處展示。這裡先以最新一屆得獎店舖作真實展示樣本，再設會員企業展示區的完整欄位——會員提交資料後即可上架。</p></div>
+
+    <h3 class="serif" style="color:var(--coffee);margin-bottom:12px">得獎店舖（真實展示樣本 · 第 17 屆）</h3>
+    <div class="grid3" style="margin-bottom:26px">
+      <div class="card"><span class="pill red">冠軍得獎者</span><h3>鍾煜培</h3><p>經營三間咖啡店<br><span class="mut">十年港式奶茶製作經驗 · 十五年咖啡專業背景<br>所屬店名：待確認</span></p></div>
+      <div class="card"><span class="pill red">亞軍得獎者</span><h3>陳錫恒</h3><p>元朗巨昇冰室（負責人）<br><span class="mut">地區：元朗</span></p></div>
+      <div class="card"><span class="pill red">季軍得獎者</span><h3>李偉志</h3><p>50 年歷史茶餐廳傳人<br><span class="mut">所屬店名：待確認</span></p></div>
+    </div>
+
+    <h3 class="serif" style="color:var(--coffee);margin-bottom:12px">會員企業展示區（欄位示範）</h3>
+    <div class="searchbox"><input type="text" id="memSearch" placeholder="搜尋會員企業（示範搜尋框）" oninput="filterMembers()"><select id="memCat" onchange="filterMembers()" style="max-width:200px"><option value="">全部分類</option><option>餐飲／茶餐廳</option><option>飲品品牌</option><option>咖啡／紅茶供應商</option><option>設備及服務供應商</option></select></div>
+    <div class="grid2" id="memGrid">
+      <div class="card mem" data-cat="餐飲／茶餐廳"><span class="pill">餐飲／茶餐廳</span><h3>企業名稱（示範欄位）</h3><p class="mut">簡介、地區、地址、電話、主打產品——日後由會員企業提交資料上架</p></div>
+      <div class="card mem" data-cat="飲品品牌"><span class="pill">飲品品牌</span><h3>企業名稱（示範欄位）</h3><p class="mut">簡介、地區、地址、電話、主打產品——日後由會員企業提交資料上架</p></div>
+      <div class="card mem" data-cat="咖啡／紅茶供應商"><span class="pill">咖啡／紅茶供應商</span><h3>企業名稱（示範欄位）</h3><p class="mut">簡介、地區、地址、電話、主打產品——日後由會員企業提交資料上架</p></div>
+      <div class="card mem" data-cat="設備及服務供應商"><span class="pill">設備及服務供應商</span><h3>企業名稱（示範欄位）</h3><p class="mut">簡介、地區、地址、電話、主打產品——日後由會員企業提交資料上架</p></div>
+    </div>
+    <div class="note">以上四類卡片全部為<strong>示範欄位</strong>，不代表任何真實會員名單；會員企業按指定格式提交資料、經協會確認後在此上架。</div>
+  </div>
+</section>
+
+<section id="join">
+  <div class="wrap">
+    <div class="sec-head"><div class="k">JOIN US</div><h2>入會申請</h2>
+    <p>舊站的入會頁只有福利和費用文字，沒有表格、沒有提交渠道。這裡把申請做成完整流程：在網上填表、提交、確認、繳費、上架，一條龍。</p></div>
+    <div class="grid2">
+      <div class="card">
+        <h3>會員福利</h3>
+        <ul style="padding-left:20px">
+          <li>獲得咖啡及紅茶最新資訊及動向</li>
+          <li>為會員提供技術及品質培訓計劃</li>
+          <li>為會員組團參觀考察訪問</li>
+          <li>為會員提供與行業中的領導者交流及學習的活動</li>
+          <li>個人會員可獲本會認可的電子會員證書；公司會員可獲本會認可的會員認證牌匾</li>
+          <li>個人會員可獲會員價格優惠；公司會員可獲 VIP 折扣優惠</li>
+        </ul>
+        <h3 style="margin-top:18px">會員類別及費用</h3>
+        <p><strong>公司會員</strong>：凡正式註冊的公司均可申請加入<br>費用：港幣 500 元正（一次性，毋需年費）</p>
+        <p style="margin-top:8px"><strong>普通會員</strong>：對咖啡和紅茶有興趣人士均可申請加入<br>費用：港幣 100 元正（一次性，毋需年費）</p>
+        <p class="small mut" style="margin-top:10px">福利與費用資料來源：協會官網「成為會員」頁（2026-11-10 查核），屬協會現行公開會費。</p>
+        <div class="steps">
+          <div class="step"><b>1</b>填表提交</div>
+          <div class="step"><b>2</b>協會確認資格</div>
+          <div class="step"><b>3</b>繳付會費</div>
+          <div class="step"><b>4</b>名錄上架</div>
+        </div>
+      </div>
+      <div class="card">
+        <h3>網上申請表（示範）</h3>
+        <form id="joinForm" onsubmit="return demoSubmit(event)">
+          <label>申請類別
+            <select required><option value="">請選擇</option><option>公司會員（HK$500，一次性）</option><option>普通會員（HK$100，一次性）</option></select>
+          </label>
+          <div class="row">
+            <label>公司名稱（如適用）<input type="text" placeholder="公司會員填寫"></label>
+            <label>聯絡人姓名<input type="text" required placeholder="姓名"></label>
+          </div>
+          <div class="row">
+            <label>聯絡電話<input type="tel" required placeholder="電話"></label>
+            <label>電郵<input type="email" required placeholder="電郵"></label>
+          </div>
+          <label>業務／背景簡介<textarea rows="3" placeholder="簡述業務性質或對咖啡紅茶的興趣"></textarea></label>
+          <button class="btn" type="submit">提交申請</button>
+          <div class="ok-msg" id="okMsg">✓ 已收到你的申請（示範畫面）。正式流程：協會確認資格後會以電郵或電話聯絡你，繳付會費後完成入會，公司會員資料將於「會員企業」專區上架。<br><span class="small">註：本表為概念示範樣品，不會傳送或儲存任何資料；正式收件方式由協會指定。</span></div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="events">
+  <div class="wrap">
+    <div class="sec-head"><div class="k">EVENTS</div><h2>活動</h2>
+    <p>活動分「即將到來」與「已結束」兩區，每項標明完整日期——舊站把已過去的活動繼續標作「即將到來」的情況，不會再發生。</p></div>
+    <h3 class="serif" style="color:var(--coffee);margin-bottom:12px">即將到來</h3>
+    <div class="card" style="border-left:5px solid var(--amber);margin-bottom:22px">
+      <span class="pill red">2026-12-10 · 廣州</span>
+      <h3 style="margin-top:6px">第 17 屆金茶王大賽——全國賽及大灣區賽總決賽</h3>
+      <p class="mut">對象：各賽區優勝者及嘉賓 · 香港區冠軍鍾煜培將代表香港出賽 · 報名方法：不適用（決賽）<br>資訊來源：金茶王大賽專站 2026 屆專頁</p>
+    </div>
+    <h3 class="serif" style="color:var(--coffee);margin-bottom:12px">已結束（歸檔示範）</h3>
+    <div class="grid2">
+      <div class="card"><span class="pill">2026-08-14 · 香港會議展覽中心</span><h3>第 17 屆金茶王大賽香港區決賽</h3><p class="mut">於香港國際茶展期間舉行，完整得獎名單見檔案庫。</p></div>
+      <div class="card"><span class="pill">2026-07-17</span><h3>第 17 屆金茶王大賽初賽</h3><p class="mut">24 名選手參賽，8 人晉級香港區決賽。</p></div>
+      <div class="card"><span class="pill">2026 年 6 月</span><h3>非遺月本地餐廳招募推廣活動</h3><p class="mut">配合「香港非遺月」的推廣活動。</p></div>
+      <div class="card"><span class="pill">2026 年 1–3 月 · 協會會址</span><h3>港式奶茶製作技藝工作坊（十多場）</h3><p class="mut">學校團體／社區機構專場，於協會會址舉行。報名方法：待協會提供。</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="media">
+  <div class="wrap">
+    <div class="sec-head"><div class="k">MEDIA</div><h2>傳媒報道歸檔</h2>
+    <p>舊站的傳媒剪報停在 2018 年 8 月，之後八年的報道一篇都沒有上站。這裡按年份把 2024–2026 年的報道補回來，與 2018 年的舊剪報接上。</p></div>
+
+    <h3 class="serif" style="color:var(--coffee)">2026 年</h3>
+    <div class="mrow"><span class="d">2026-08-17</span><span class="t"><a href="https://www.tkww.hk/a/202608/17/AP6a82a7a2e4b099d2ba48c17e.html" target="_blank" rel="noopener"><b>金茶王（港式奶茶）全國及大灣區大賽 鍾煜培膺港區冠軍</b></a></span><span class="src pill">大公文匯網</span></div>
+    <div class="mrow"><span class="d">2026-08-14</span><span class="t"><a href="https://www.hk01.com/%E7%A4%BE%E6%9C%83%E6%96%B0%E8%81%9E/60380120/%E9%87%91%E8%8C%B6%E7%8E%8B%E5%A4%A7%E8%B3%BD-%E5%92%96%E5%95%A1%E5%BA%97%E8%80%81%E9%97%86%E6%B2%96%E5%92%96%E5%95%A1%E5%BD%A2%E5%BC%8F%E6%B2%96%E5%A5%B6%E8%8C%B6%E5%B0%81%E7%8E%8B-%E7%94%A8%E6%93%85%E9%95%B7%E6%8A%80%E8%83%BD%E6%AF%94%E8%B3%BD" target="_blank" rel="noopener"><b>金茶王大賽｜咖啡店老闆沖咖啡形式沖奶茶封王：用擅長技能比賽</b></a></span><span class="src pill">香港01</span></div>
+    <div class="mrow"><span class="d">2026-08-14</span><span class="t"><a href="https://www.hkcna.hk/docDetail.jsp?id=101395845&channel=4372" target="_blank" rel="noopener"><b>金茶王（港式奶茶）全國及大灣區大賽2026香港區決賽落幕</b></a></span><span class="src pill">香港新聞網（中新社）</span></div>
+    <div class="mrow"><span class="d">2026-07-17</span><span class="t"><a href="https://www.hkcd.com.hk/content_app/2026-07/17/content_8765370.html" target="_blank" rel="noopener"><b>金茶王（港式奶茶）全國及大灣區初賽順利舉行 八強選手晉級8月</b></a></span><span class="src pill">香港商報</span></div>
+
+    <h3 class="serif" style="color:var(--coffee);margin-top:22px">2025 年</h3>
+    <div class="mrow"><span class="d">2025-08-15</span><span class="t"><b>第十六屆金茶王大賽香港區決賽——文化體育及旅遊局局長羅淑佩任主禮嘉賓</b>（報道主題歸檔）</span><span class="src pill">政府新聞公報</span></div>
+    <div class="mrow"><span class="d">2025-08-22</span><span class="t"><b>2025 屆香港區決賽影片（附完整得獎名單）於「KamCha 金茶王」YouTube 頻道上載</b>（影音歸檔）</span><span class="src pill">YouTube</span></div>
+
+    <h3 class="serif" style="color:var(--coffee);margin-top:22px">2024 年</h3>
+    <div class="mrow"><span class="d">2024-08-16</span><span class="t"><b>第十五屆金茶王大賽香港區決賽報道</b>（報道主題歸檔，原文標題以媒體存檔為準）</span><span class="src pill">香港商報</span></div>
+    <div class="mrow"><span class="d">2024-11-28</span><span class="t"><b>金茶王廣州總決賽暨粵港澳大灣區餐飲食品業論壇報道</b>（報道主題歸檔）</span><span class="src pill">香港商報</span></div>
+
+    <h3 class="serif" style="color:var(--coffee);margin-top:22px">2018 年及以前（舊站原有剪報）</h3>
+    <div class="mrow"><span class="d">2018 年 8 月</span><span class="t"><b>報章剪報圖集</b>：都市日報、澳門日報、成報、東方日報、香港商報、新假期</span><span class="src pill">舊站剪報頁</span></div>
+    <div class="note">2018 年之後至 2024 年的報道空白，已由上方 2024–2026 年歸檔補回；2019–2023 年報道待協會提供剪報後逐年補入。</div>
+  </div>
+</section>
+
+<section id="partners">
+  <div class="wrap">
+    <div class="sec-head"><div class="k">PARTNERS</div><h2>贊助與合作</h2>
+    <p>大賽的冠名贊助與協辦機構，在舊站只能散見於新聞稿文字裡，沒有一個正式的致謝與展示位置。這裡給他們一個專頁。</p></div>
+    <div class="grid2">
+      <div class="card">
+        <h3>金茶王大賽冠名贊助</h3>
+        <p><span class="pill red">中華煤氣</span>全國賽冠名</p>
+        <p><span class="pill red">中華電力</span>大灣區賽冠名</p>
+        <p><span class="pill red">香港電燈</span>啟動禮及香港區賽冠名</p>
+        <p class="small mut" style="margin-top:10px">機構標誌位置為欄位示範，標誌圖檔由各機構提供後上架。</p>
+      </div>
+      <div class="card">
+        <h3>協辦機構</h3>
+        <p><span class="pill">香港貿易發展局</span><span class="pill">香港金百加集團</span><span class="pill">廣東樂滿家咖啡集團</span><span class="pill">點點綠集團</span></p>
+        <h3 style="margin-top:16px">大賽資訊導引</h3>
+        <p class="mut">大賽報名、賽制與品牌產品資訊，現由金茶王大賽專站提供：<a href="https://www.kamcha.com.hk" target="_blank" rel="noopener">kamcha.com.hk</a>；協會資訊、歷屆檔案與入會申請，以本主站為準，兩站互相導引、口徑統一。</p>
+      </div>
+    </div>
+    <div class="card" style="margin-top:16px">
+      <h3>合作紀錄</h3>
+      <div class="mrow"><span class="d">2026-07-06</span><span class="t"><b>與東莞市咖啡與茶飲行業協會簽約</b></span><span class="src pill">協會消息</span></div>
+      <div class="mrow"><span class="d">2026-09-03</span><span class="t"><b>雲南保山考察及簽約</b></span><span class="src pill">協會消息</span></div>
+      <div class="mrow"><span class="d">日期待確認</span><span class="t"><b>與普洱市檢驗檢測院合作</b>（原消息頁年份標示有歧義，年份待協會確認）</span><span class="src pill">協會消息</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="heritage">
+  <div class="wrap">
+    <div class="sec-head"><div class="k">HERITAGE</div><h2>非遺專區：港式奶茶製作技藝</h2></div>
+    <div class="grid2">
+      <div class="card">
+        <h3>香港的非物質文化遺產</h3>
+        <p>港式奶茶製作技藝於 <strong>2014 年</strong>列入香港非物質文化遺產清單，並於 <strong>2017 年</strong>列入香港非物質文化遺產代表作名錄。協會自 2009 年起舉辦金茶王大賽，推動技藝傳承與行業交流；相關成果包括「港式奶茶製作技藝」特別郵票等（協會專頁）。</p>
+      </div>
+      <div class="card">
+        <h3>常見問題</h3>
+        <p><strong>Q：協會是甚麼機構？何時成立？</strong><br>由金百加集團主席黃家和太平紳士於 2008 年創立的非政治、非牟利組織。</p>
+        <p style="margin-top:8px"><strong>Q：金茶王大賽辦了多少屆？</strong><br>自 2009 年起舉辦，2026 年為第 17 屆；歷屆名單見本頁檔案庫。</p>
+        <p style="margin-top:8px"><strong>Q：如何入會？</strong><br>公司會員港幣 500 元、普通會員港幣 100 元，均為一次性、毋需年費（協會官網現行會費），可於本頁「入會申請」填表。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="sec-head"><div class="k">CONTACT</div><h2>聯絡我們</h2></div>
+    <div class="card">
+      <p><strong>香港咖啡紅茶協會　Association of Coffee and Tea of Hong Kong</strong></p>
+      <p style="margin-top:8px">電話：(852) 3181 4498<br>傳真：(852) 3181 4442<br>電郵：<a href="mailto:info@coffee-tea.hk">info@coffee-tea.hk</a><br>地址：香港新界葵芳新都會廣場2座7樓713-719室　<a href="https://www.google.com/maps/search/?api=1&query=%E8%91%B5%E8%8A%B3%E6%96%B0%E9%83%BD%E6%9C%83%E5%BB%A3%E5%A0%B42%E5%BA%A7" target="_blank" rel="noopener">在地圖查看 →</a></p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <b class="serif" style="font-size:1.1rem">香港咖啡紅茶協會</b>
+        <p class="small" style="margin-top:6px">Association of Coffee and Tea of Hong Kong<br>主辦：金茶王大賽（港式奶茶）</p>
+      </div>
+      <div class="small">
+        電話 (852) 3181 4498 · 傳真 (852) 3181 4442<br>
+        電郵 <a href="mailto:info@coffee-tea.hk">info@coffee-tea.hk</a><br>
+        地址：香港新界葵芳新都會廣場2座7樓713-719室
+      </div>
+    </div>
+    <div class="fine">概念示範樣品 · 非協會官方網站。本頁內容以協會官網及公開報道等已核實公開資料整理，示範欄位已逐處標明；正式資料以協會公佈為準。　樣品製作：AiLumen Digital</div>
+  </div>
+</footer>
+
+<a class="toplink" href="#top">↑ 回到頂部</a>
+
+<script>
+document.querySelectorAll('#menu a').forEach(function(a){
+  a.addEventListener('click',function(){
+    document.getElementById('menu').classList.remove('open');
+  });
+});
+document.querySelectorAll('#yearTabs button').forEach(function(b){
+  b.addEventListener('click',function(){
+    document.querySelectorAll('#yearTabs button').forEach(function(x){x.classList.remove('on')});
+    document.querySelectorAll('.year-panel').forEach(function(p){p.classList.remove('on')});
+    b.classList.add('on');
+    document.getElementById(b.dataset.y).classList.add('on');
+  });
+});
+function demoSubmit(e){
+  e.preventDefault();
+  document.getElementById('okMsg').style.display='block';
+  document.getElementById('okMsg').scrollIntoView({behavior:'smooth',block:'center'});
+  return false;
+}
+function filterMembers(){
+  var q=(document.getElementById('memSearch').value||'').trim();
+  var c=document.getElementById('memCat').value;
+  document.querySelectorAll('.mem').forEach(function(card){
+    var okCat=!c||card.dataset.cat===c;
+    var okQ=!q||card.textContent.indexOf(q)>-1;
+    card.style.display=(okCat&&okQ)?'':'none';
+  });
+}
+</script>
+</body>
+</html>
